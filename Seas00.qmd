@@ -1,0 +1,368 @@
+---
+title: "Principios de Microeconomía"
+author: "Carlos A. Yanes Guerra"
+institute: "Universidad del Norte <br>{{< fa link >}} [Website: https://carlosyanes.netlify.app/](https://carlosyanes.netlify.app/)"
+orcid: 0000-0003-0683-3727
+title-slide-attributes:
+  data-background-image: "Vimage/front.jpg"
+  data-background-size: cover
+  data-background-opacity: "0.25"
+format: 
+  revealjs:
+    theme: [opciones.scss]
+    mainfont: "Atkinson Hylerlegible"
+    fontcolor: "#22304E"
+    linkcolor: "#80a9d7"
+editor: visual
+---
+
+```{r Setup, include = F}
+options(htmltools.dir.version = FALSE)
+library(pacman)
+p_load(broom, latex2exp, ggplot2, ggthemes, ggforce, viridis, dplyr, magrittr, knitr, parallel, gapminder)
+
+library(tidyverse)
+library(babynames)
+library(fontawesome) # from github: https://github.com/rstudio/fontawesome
+library(DiagrammeR)
+library(hrbrthemes)
+library(econocharts)
+library(plotly)
+
+# Definir colores
+red_pink <- "#e64173"
+met_slate <- "#272822" # metropolis font color 
+purple <- "#9370DB"
+green <- "#007935"
+light_green <- "#7DBA97"
+orange <- "#FD5F00"
+turquoise <- "#44C1C4"
+# Notes directory
+dir_slides <- "~/Documents/Trabajo en R/Con Mac/Microeconomics/pmicroeconomics/Files/Clase 1/"
+
+
+
+# Knitr options
+
+opts_chunk$set(
+  comment = "#>",
+  fig.align = "center",
+  fig.height = 7,
+  fig.width = 10.5,
+  warning = F,
+  message = F
+)
+
+theme_gif <- theme_bw() + theme(
+  axis.line = element_line(color = met_slate),
+  panel.grid = element_blank(),
+  rect = element_blank(),
+  text = element_text(family = "Fira Sans", color = met_slate, size = 17),
+  axis.text.x = element_text(size = 12),
+  axis.text.y = element_text(size = 12),
+  axis.ticks = element_blank()
+)
+wrapper <- function(x, ...) paste(strwrap(x, ...), collapse = "\n")
+```
+
+# Introducción
+
+## Presentación
+
+![](Vimage/fotcy.png){fig-align="left" style="border-radius: 50%;"}
+
+`r fa('address-book')` [Carlos Andrés Yanes Guerra](https://www.linkedin.com/in/carlos-andres-yanes-guerra-0026bb31/?originalSubdomain=co)
+
+`r fa('x-twitter')` [Keynes37](https://x.com/keynes37)
+
+`r fa('envelope')` [cayanes@uninorte.edu.co](mailto:cayanes@uninorte.edu.co)
+
+`r fa('github')` [Github](https://github.com/keynes37)
+
+`r fa('google')` [Google Scholar](https://scholar.google.com/citations?user=NlFSQDwAAAAJ&hl=es)
+
+`r fa('graduation-cap')` Profesor Asistente en el Departamento de Economía Uninorte. **Bloque D** Oficina: 2-15.
+
+`r fa('book')` Microeconomía, Econometría y Ciencia de datos
+
+## Esquema del Curso
+
+-   Clases online: [la asistencia a ellas es muy importante]{.bg style="--col: #FFFF00"}
+-   Notas y calificaciones:
+
+::: fragment
+Un cuadro que requiere de [atención]{.fg style="--col: #FF0000"} 🧐
+
+| Requerimientos    | Fechas        | Ponderador     |
+|-------------------|---------------|----------------|
+| Actividades I y II| Referenciadas | 20% (cada uno) |
+| Autoevaluación    | A solicitud   | 10%            |
+| Talleres          | A solicitud   | 20%            |
+| Examen final      | Por registro  | 30%            |
+
+♠ Las [notas]{.fg style="--col: #FF8000"} son totalmente individuales
+:::
+
+## Esquema del Curso
+
+-   Dedicado a analizar y presentar datos e información de microeconomía.
+-   Las clases tienen [Ejemplos]{.fg style="--col: #FF8000"}, *explicación o claridad* de ejercicios y desde luego la parte de [Actividades]{.fg style="--col: #FF8000"} que deben desarrollar cada uno de los estudiantes.
+- El aprendizaje es autonomo. No es un [curso]{.alert} mas como -*los cursos de pandemia*-
+- Se requiere por **obligación** hacer uso de `r fa('video')` cuando interactue con el profesor.
+-   Por ello, [este curso]{.fg style="--col: #FF8000"} combinará [principios teóricos]{.fg style="--col: #0000FF"} con análisis del mundo real. De este modo, podremos tener una vista mas general.
+
+## Esquema del Curso
+
+Lo que debe hacer siempre
+
+::: columns
+::: {.column width="47.5%"}
+::: {style="text-align: center;"}
+![](Vimage/study.png){fig-align="center"} [{{< fa brands cc-visa >}}]{style="font-size: 100px;color: #3564B1"}
+:::
+:::
+
+::: {.column width="5%"}
+::: {style="text-align: center; font-size: 40px;"}
+<br><br> {{< fa arrow-right >}}
+:::
+:::
+
+::: {.column width="47.5%"}
+::: {style="text-align: center; font-size: 190px;"}
+[{{< fa brands wpforms >}}]{style="color: #d35836"}
+:::
+:::
+:::
+
+P.e.
+Leer cada una de las partes del curso situadas en el Brightspace, desarrollar las actividades (hacer controles) y estar pendientes de las explicaciones.
+
+## Esquema del Curso
+
+```{=html}
+<iframe src="https://openstax.org/details/books/principles-microeconomics-3e" title="Libro de interacción: Principios de Microeconomía" width="1100px" height="600px"></iframe>
+```
+
+# Preliminar
+
+## Economía
+
+::: fragment
+`r fa("donate", fill="red")` El principal [problema]{.alert} en economía es que hay que reconocer que todo es **escaso**.
+:::
+
+::: fragment
+El agua, los bosques, el cobre, los osos pandas, el aire limpio.
+:::
+
+::: fragment
+El tiempo, la calidad de de vida (*medido en esperanza*), la concentración.
+:::
+
+::: fragment
+### Escasez 
+> No existen los suficientes bienes para satisfacer las necesidades ilimitadas de los individuos.
+:::
+
+::: fragment
+- Sin embargo... por lo pronto nos las arreglamos
+:::
+
+# El tema de la escasez
+
+## La escasez
+
+::: fragment
+> La **escasez** se da porque en el mundo todo tiene un [límite]{.alert}!!. Los *recursos* son limitados y no se pueden satisfacer todas las necesidades que se tienen.
+:::
+
+::: fragment
+#### Pregunta:
+:::
+
+::: fragment
+`r fa("user-tie", fill="grey")` Qué señales de escasez percibe usted?, que indicador es el mas apropiado para medirla?
+:::
+
+## Economía
+### Como nos organizamos
+
+- En teoría buscamos responder a tres (3) preguntas fundamentales:
+
+::: fragment
+1. Qué [producir]{.alert}?
+2. Cómo [producirlo]{.blut}?
+3. Para quién [producir]{.oranger}?
+:::
+
+::: fragment
+::: callout-tip
+La forma en que las sociedades actúan ante estas cuestiones tiene importantes consecuencias para mitigar los costos de la escasez.
+:::
+:::
+
+# Piense ahora en lo siguiente
+
+## Sistemas {.smaller}
+
+Un par de dichos:
+
+::: fragment
+### Karl Marx:
+> "De cada uno, según su capacidad; a cada uno, según su necesidad."
+:::
+
+::: fragment
+### Juan el Bautista:
+> "El que tiene dos túnicas debe compartirlas con el que no tiene ninguna; y el que tiene comida debe hacer lo mismo."
+:::
+
+::: fragment
+### Winston Churchill:
+> "El vicio inherente del capitalismo es el reparto desigual de las bendiciones; la virtud inherente al socialismo es el reparto igualitario de las miserias."
+:::
+
+
+## Sistemas
+
+::: fragment
+### Feudalismo
+> Un sistema económico basado en jerarquías rígidas y en la tradición.
+- Si tus padres eran siervos, tú también lo eras.
+- Sistema económico dominante en Europa durante la Edad Media.
+:::
+
+
+::: fragment
+### Mercantilismo
+> Sistema económico en el que el gobierno distribuye derechos para determinadas actividades económicas.
+- El comercio de pieles.
+- El gobierno decide qué, cómo y para quién producir.
+- Sistema económico dominante durante el Renacimiento.
+:::
+
+## Sistemas
+
+::: fragment
+### Capitalismo
+> Sistema económico basado en la propiedad privada, los mercados y las empresas.
+Anima a los individuos a actuar en su propio interés, mientras que las fuerzas del mercado de la oferta y la demanda coordinan las actividades individuales.
+- Los bienes se distribuyen a cada uno según su capacidad, esfuerzo y propiedad heredada.
+- En principio, los individuos determinan qué, cómo y para quién producir.
+- Sistema económico dominante desde la Revolución Industrial.
+:::
+
+## Sistemas
+
+::: fragment
+### Socialismo
+> Un sistema económico basado en la buena voluntad de los individuos hacia los demás, no en su propio interés.
+- No hay propiedad privada: el Estado es propietario de los medios de producción.
+- En principio, la sociedad determina qué, cómo y para quién producir.
+- Sistema económico dominante en Europa del Este, China y algunas partes de África, el Sudeste Asiático y América Latina durante la década de 1900.
+:::
+
+# Descripción
+
+## Descripción 
+
+::: fragment
+::: callout-note
+## Importante
+Este **curso** proporciona una introducción a la microeconomía, centrado exclusivamente en los conceptos de la economía en general utilizando elementos básicos de **cálculo diferencial** 😢 y de alguna manera de la [estadística]{.oranger} 😬
+:::
+:::
+
+:::fragment
+`r fa("exclamation-triangle")` Se hace énfasis en el lenguaje [matemático]{.blut}.
+:::
+
+## [Todo esto es raro...]{style="font-size: 80px; font-family: Brusher;"} {.center}
+
+::: incremental
+- **Economía**: *Un sistema donde se coordinan las actividades productivas de una sociedad*
+
+- **Economía de Mercado**: *Es una economía donde se toman decisiones de producción y consumo de bienes y servicios*
+
+- **Mano invisible**: *La forma en la cual los individuos persiguen a como de lugar su propio bienestar, sin embargo eso conlleva a resultados mejores para una sociedad como un todo*
+
+:::
+
+# Qué es la Microeconomía?
+
+## Microeconomía
+
+::: fragment
+::: callout-note
+## Microeconomía 
+tiene que ver con entender el comportamiento "individual".
+:::
+:::
+
+::: fragment
+`r fa("rocket", fill="blue")` **Consumidores** *Tienen decisiones de compra*
+:::
+
+::: fragment
+[Ejemplo: Si su cantante (artista) favorito llega a la ciudad, compraría una boleta en $797.000?]{.bg style="--col: #dcdcdc"}
+:::
+
+
+## Microeconomía
+::: fragment
+`r fa("rocket", fill="red")` **Empresas** *Tienen decisiones de compra de insumos*
+:::
+
+::: fragment
+- Cuantos trabajadores vas a contratar y cuanto de maquinaria vas adquirir?
+:::
+
+::: fragment
+`r fa("rocket", fill="grey")` **Reguladores** *El estado puede anticipar cuantas firmas y consumidores habrá en los distintos mercados*
+:::
+
+::: fragment
+Pueden las herramientas de política pública, tales como los impuestos, tasas, sobretasas ser beneficiosos para la sociedad?
+:::
+
+## Microeconomía
+
+::: fragment
+> El comportamiento de los *agentes económicos* es investigado bajo la hipotesis de la **Racionalidad**:
+:::
+
+::: incremental
+- Cada *agente* busca [maximizar]{.blut} su bienestar (p.e., la utilidad de los consumidores, o beneficios de la empresa), dados ciertos recursos (restricciones) y la información con la que se cuenta o se tiene acceso.
+- `r fa("plane", fill="grey")` Cuando un agente busca maximizar su propio bienestar (sobre todo el material) y no le interesa lo demás.
+- `r fa("plane", fill="blue")` Cuando maximiza su bienestar y el de otros agentes (permitiendo incluso el altruismo).
+:::
+
+# Trabajo
+
+## Trabajo de clase
+
+- Lea a continuación lo siguiente: [Cap 1: Qué es la economía y su importancia](https://openstax.org/books/principles-microeconomics-3e/pages/1-1-what-is-economics-and-why-is-it-important)
+
+- Regrese a la sesión a la hora que le manifieste el profesor. No sin antes de responder las preguntas del [control 1](https://cursos.uninorte.edu.co/d2l/lms/quizzing/admin/quizzes_manage.d2l?ou=106306)
+
+
+## Gracias! por su atención {.center}
+
+#### Alguna pregunta adicional?
+
+Slides de la clase:
+
+{{< fa link >}} [Curso virtual](https://cursos.uninorte.edu.co/d2l/home/106306)
+
+{{< fa brands github >}} [keynes37](https://github.com/keynes37)
+
+## Bibliografía {.center}
+
+`r fa('book')` Mankiw, N. G. (2005). *Principios de microeconomía* /N. Gregory Mankiw (No. 338.5 M55Y.).
+
+`r fa('book')` Pindyck, R. S., Rubinfeld, D. L., & Rabasco, E. (2013). *Microeconomía*. Pearson Italia..
+
+`r fa('book')` Krugman, P., & Wells, R. (2014). *Microeconomics (for AP)*. New York: Worth Publishers.
+
+`r fa('book')` Muñoz-Garcia, F. (2017). *Advanced microeconomic theory: an intuitive approach with examples*. MIT Press.
