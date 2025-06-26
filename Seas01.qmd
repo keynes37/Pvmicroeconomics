@@ -455,7 +455,7 @@ Es la preferencia de establecer [un digito mas]{.reder} a la izquierda de la cif
 ::: callout-warning
 ## Pague 1 lleve 2
 
-Preferencia tradicional haciendo ver al consumidor que lleva una ganga. el objetivo de ofrecer la segunda unidad gratis cuando en realidad estan vendiendo un solo producto.
+Preferencia tradicional haciendo ver al consumidor que lleva una ganga. El objetivo de ofrecer la segunda unidad gratis cuando en realidad estan vendiendo un solo producto.
 :::
 ::::
 
@@ -490,7 +490,7 @@ Establecen dos productos [similares]{.alert} uno [al lado del otro]{.bg style="-
 
 -   Piense en una estrategia de precios (escoja solo una) para cierto producto que desee impulsar o llevar al mercado
 
--   Prepárese a presentarla el día jueves. es individual.
+-   Es totalmente individual
 
 -   La sesión de sustentación es corta no puede excederse en tiempo
 
