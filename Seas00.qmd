@@ -75,7 +75,7 @@ wrapper <- function(x, ...) paste(strwrap(x, ...), collapse = "\n")
 
 `r fa('x-twitter')` [Keynes37](https://x.com/keynes37)
 
-`r fa('envelope')` [cayanes@uninorte.edu.co](mailto:cayanes@uninorte.edu.co)
+`r fa('envelope')` [cayanes\@uninorte.edu.co](mailto:cayanes@uninorte.edu.co)
 
 `r fa('github')` [Github](https://github.com/keynes37)
 
@@ -93,12 +93,12 @@ wrapper <- function(x, ...) paste(strwrap(x, ...), collapse = "\n")
 ::: fragment
 Un cuadro que requiere de [atención]{.fg style="--col: #FF0000"} 🧐
 
-| Requerimientos    | Fechas        | Ponderador     |
-|-------------------|---------------|----------------|
-| Actividades I y II| Referenciadas | 20% (cada uno) |
-| Autoevaluación    | A solicitud   | 10%            |
-| Talleres          | A solicitud   | 20%            |
-| Examen final      | Por registro  | 30%            |
+| Requerimientos     | Fechas        | Ponderador     |
+|--------------------|---------------|----------------|
+| Actividades I y II | Referenciadas | 20% (cada uno) |
+| Autoevaluación     | A solicitud   | 10%            |
+| Talleres           | A solicitud   | 20%            |
+| Examen final       | Por registro  | 30%            |
 
 ♠ Las [notas]{.fg style="--col: #FF8000"} son totalmente individuales
 :::
@@ -107,8 +107,8 @@ Un cuadro que requiere de [atención]{.fg style="--col: #FF0000"} 🧐
 
 -   Dedicado a analizar y presentar datos e información de microeconomía.
 -   Las clases tienen [Ejemplos]{.fg style="--col: #FF8000"}, *explicación o claridad* de ejercicios y desde luego la parte de [Actividades]{.fg style="--col: #FF8000"} que deben desarrollar cada uno de los estudiantes.
-- El aprendizaje es autonomo. No es un [curso]{.alert} mas como -*los cursos de pandemia*-
-- Se requiere por **obligación** hacer uso de `r fa('video')` cuando interactue con el profesor.
+-   El aprendizaje es autonomo. No es un [curso]{.alert} mas como -*los cursos de pandemia*-
+-   Se requiere por **obligación** hacer uso de `r fa('video')` cuando interactue con el profesor.
 -   Por ello, [este curso]{.fg style="--col: #FF8000"} combinará [principios teóricos]{.fg style="--col: #0000FF"} con análisis del mundo real. De este modo, podremos tener una vista mas general.
 
 ## Esquema del Curso
@@ -135,15 +135,13 @@ Lo que debe hacer siempre
 :::
 :::
 
-P.e.
-Leer cada una de las partes del curso situadas en el Brightspace, desarrollar las actividades (hacer controles) y estar pendientes de las explicaciones.
+P.e. Leer cada una de las partes del curso situadas en el Brightspace, desarrollar las actividades (hacer controles) y estar pendientes de las explicaciones.
 
 ## Esquema del Curso
 
 ```{=html}
 <iframe src="https://openstax.org/details/books/principles-microeconomics-3e" title="Libro de interacción: Principios de Microeconomía" width="1100px" height="600px"></iframe>
 ```
-
 # Preliminar
 
 ## Economía
@@ -161,12 +159,13 @@ El tiempo, la calidad de de vida (*medido en esperanza*), la concentración.
 :::
 
 ::: fragment
-### Escasez 
+### Escasez
+
 > No existen los suficientes bienes para satisfacer las necesidades ilimitadas de los individuos.
 :::
 
 ::: fragment
-- Sin embargo... por lo pronto nos las arreglamos
+-   Sin embargo... por lo pronto nos las arreglamos
 :::
 
 # El tema de la escasez
@@ -186,14 +185,15 @@ El tiempo, la calidad de de vida (*medido en esperanza*), la concentración.
 :::
 
 ## Economía
+
 ### Como nos organizamos
 
-- En teoría buscamos responder a tres (3) preguntas fundamentales:
+-   En teoría buscamos responder a tres (3) preguntas fundamentales:
 
 ::: fragment
-1. Qué [producir]{.alert}?
-2. Cómo [producirlo]{.blut}?
-3. Para quién [producir]{.oranger}?
+1.  Qué [producir]{.alert}?
+2.  Cómo [producirlo]{.blut}?
+3.  Para quién [producir]{.oranger}?
 :::
 
 ::: fragment
@@ -210,83 +210,76 @@ Un par de dichos:
 
 ::: fragment
 ### Karl Marx:
+
 > "De cada uno, según su capacidad; a cada uno, según su necesidad."
 :::
 
 ::: fragment
 ### Juan el Bautista:
+
 > "El que tiene dos túnicas debe compartirlas con el que no tiene ninguna; y el que tiene comida debe hacer lo mismo."
 :::
 
 ::: fragment
 ### Winston Churchill:
+
 > "El vicio inherente del capitalismo es el reparto desigual de las bendiciones; la virtud inherente al socialismo es el reparto igualitario de las miserias."
 :::
-
 
 ## Sistemas
 
 ::: fragment
 ### Feudalismo
-> Un sistema económico basado en jerarquías rígidas y en la tradición.
-- Si tus padres eran siervos, tú también lo eras.
-- Sistema económico dominante en Europa durante la Edad Media.
-:::
 
+> Un sistema económico basado en jerarquías rígidas y en la tradición. - Si tus padres eran siervos, tú también lo eras. - Sistema económico dominante en Europa durante la Edad Media.
+:::
 
 ::: fragment
 ### Mercantilismo
-> Sistema económico en el que el gobierno distribuye derechos para determinadas actividades económicas.
-- El comercio de pieles.
-- El gobierno decide qué, cómo y para quién producir.
-- Sistema económico dominante durante el Renacimiento.
+
+> Sistema económico en el que el gobierno distribuye derechos para determinadas actividades económicas. - El comercio de pieles. - El gobierno decide qué, cómo y para quién producir. - Sistema económico dominante durante el Renacimiento.
 :::
 
 ## Sistemas
 
 ::: fragment
 ### Capitalismo
-> Sistema económico basado en la propiedad privada, los mercados y las empresas.
-Anima a los individuos a actuar en su propio interés, mientras que las fuerzas del mercado de la oferta y la demanda coordinan las actividades individuales.
-- Los bienes se distribuyen a cada uno según su capacidad, esfuerzo y propiedad heredada.
-- En principio, los individuos determinan qué, cómo y para quién producir.
-- Sistema económico dominante desde la Revolución Industrial.
+
+> Sistema económico basado en la propiedad privada, los mercados y las empresas. Anima a los individuos a actuar en su propio interés, mientras que las fuerzas del mercado de la oferta y la demanda coordinan las actividades individuales. - Los bienes se distribuyen a cada uno según su capacidad, esfuerzo y propiedad heredada. - En principio, los individuos determinan qué, cómo y para quién producir. - Sistema económico dominante desde la Revolución Industrial.
 :::
 
 ## Sistemas
 
 ::: fragment
 ### Socialismo
-> Un sistema económico basado en la buena voluntad de los individuos hacia los demás, no en su propio interés.
-- No hay propiedad privada: el Estado es propietario de los medios de producción.
-- En principio, la sociedad determina qué, cómo y para quién producir.
-- Sistema económico dominante en Europa del Este, China y algunas partes de África, el Sudeste Asiático y América Latina durante la década de 1900.
+
+> Un sistema económico basado en la buena voluntad de los individuos hacia los demás, no en su propio interés. - No hay propiedad privada: el Estado es propietario de los medios de producción. - En principio, la sociedad determina qué, cómo y para quién producir. - Sistema económico dominante en Europa del Este, China y algunas partes de África, el Sudeste Asiático y América Latina durante la década de 1900.
 :::
 
 # Descripción
 
-## Descripción 
+## Descripción
 
 ::: fragment
 ::: callout-note
 ## Importante
+
 Este **curso** proporciona una introducción a la microeconomía, centrado exclusivamente en los conceptos de la economía en general utilizando elementos básicos de **cálculo diferencial** 😢 y de alguna manera de la [estadística]{.oranger} 😬
 :::
 :::
 
-:::fragment
+::: fragment
 `r fa("exclamation-triangle")` Se hace énfasis en el lenguaje [matemático]{.blut}.
 :::
 
 ## [Todo esto es raro...]{style="font-size: 80px; font-family: Brusher;"} {.center}
 
 ::: incremental
-- **Economía**: *Un sistema donde se coordinan las actividades productivas de una sociedad*
+-   **Economía**: *Un sistema donde se coordinan las actividades productivas de una sociedad*
 
-- **Economía de Mercado**: *Es una economía donde se toman decisiones de producción y consumo de bienes y servicios*
+-   **Economía de Mercado**: *Es una economía donde se toman decisiones de producción y consumo de bienes y servicios*
 
-- **Mano invisible**: *La forma en la cual los individuos persiguen a como de lugar su propio bienestar, sin embargo eso conlleva a resultados mejores para una sociedad como un todo*
-
+-   **Mano invisible**: *La forma en la cual los individuos persiguen a como de lugar su propio bienestar, sin embargo eso conlleva a resultados mejores para una sociedad como un todo*
 :::
 
 # Qué es la Microeconomía?
@@ -295,7 +288,8 @@ Este **curso** proporciona una introducción a la microeconomía, centrado exclu
 
 ::: fragment
 ::: callout-note
-## Microeconomía 
+## Microeconomía
+
 tiene que ver con entender el comportamiento "individual".
 :::
 :::
@@ -305,17 +299,17 @@ tiene que ver con entender el comportamiento "individual".
 :::
 
 ::: fragment
-[Ejemplo: Si su cantante (artista) favorito llega a la ciudad, compraría una boleta en $797.000?]{.bg style="--col: #dcdcdc"}
+[Ejemplo: Si su cantante (artista) favorito llega a la ciudad, compraría una boleta en \$797.000?]{.bg style="--col: #dcdcdc"}
 :::
 
-
 ## Microeconomía
+
 ::: fragment
 `r fa("rocket", fill="red")` **Empresas** *Tienen decisiones de compra de insumos*
 :::
 
 ::: fragment
-- Cuantos trabajadores vas a contratar y cuanto de maquinaria vas adquirir?
+-   Cuantos trabajadores vas a contratar y cuanto de maquinaria vas adquirir?
 :::
 
 ::: fragment
@@ -333,19 +327,18 @@ Pueden las herramientas de política pública, tales como los impuestos, tasas, 
 :::
 
 ::: incremental
-- Cada *agente* busca [maximizar]{.blut} su bienestar (p.e., la utilidad de los consumidores, o beneficios de la empresa), dados ciertos recursos (restricciones) y la información con la que se cuenta o se tiene acceso.
-- `r fa("plane", fill="grey")` Cuando un agente busca maximizar su propio bienestar (sobre todo el material) y no le interesa lo demás.
-- `r fa("plane", fill="blue")` Cuando maximiza su bienestar y el de otros agentes (permitiendo incluso el altruismo).
+-   Cada *agente* busca [maximizar]{.blut} su bienestar (p.e., la utilidad de los consumidores, o beneficios de la empresa), dados ciertos recursos (restricciones) y la información con la que se cuenta o se tiene acceso.
+-   `r fa("plane", fill="grey")` Cuando un agente busca maximizar su propio bienestar (sobre todo el material) y no le interesa lo demás.
+-   `r fa("plane", fill="blue")` Cuando maximiza su bienestar y el de otros agentes (permitiendo incluso el altruismo).
 :::
 
 # Trabajo
 
 ## Trabajo de clase
 
-- Lea a continuación lo siguiente: [Cap 1: Qué es la economía y su importancia](https://openstax.org/books/principles-microeconomics-3e/pages/1-1-what-is-economics-and-why-is-it-important)
+-   Lea a continuación lo siguiente: [Cap 1: Qué es la economía y su importancia](https://openstax.org/books/principles-microeconomics-3e/pages/1-1-what-is-economics-and-why-is-it-important)
 
-- Regrese a la sesión a la hora que le manifieste el profesor. No sin antes de responder las preguntas del [control 1](https://cursos.uninorte.edu.co/d2l/lms/quizzing/admin/quizzes_manage.d2l?ou=106306)
-
+-   Regrese a la sesión a la hora que le manifieste el profesor. No sin antes de responder las preguntas del [control 1](https://cursos.uninorte.edu.co/d2l/lms/quizzing/admin/quizzes_manage.d2l?ou=106306)
 
 ## Gracias! por su atención {.center}
 

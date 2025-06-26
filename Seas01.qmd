@@ -71,116 +71,118 @@ wrapper <- function(x, ...) paste(strwrap(x, ...), collapse = "\n")
 
 ![](Vimage/Estp41.png)
 
-
 ## Pilares de precios
 
-:::{.fragment}
-:::{.callout-note}
+:::: fragment
+::: callout-note
 ## Costo
+
 Los [costos]{.reder} son uno de los factores más comúnmente reconocido en una estrategia de fijación de precios y suelen fijar el precio mínimo. -Si no son todas- la mayoría de empresas fijan su estrategia a partir del costo que tiene cuando produce o comercializa algo
 :::
-:::
+::::
 
-:::{.fragment}
+::: fragment
 ```{r}
 #| include: false
 #| warning: false
 library(fontawesome)
 ```
 
-- Costos directos `r fa("coffee", fill="red")`
-- Costos indirectos `r fa("coins", fill="red")`
+-   Costos directos `r fa("coffee", fill="red")`
+-   Costos indirectos `r fa("coins", fill="red")`
 :::
 
 ## Pilares de precios
 
-:::{.fragment}
-:::{.callout-note}
+:::: fragment
+::: callout-note
 ## Valor de compra
+
 Los [compradores]{.alert} siempre valoran los bienes y servicios de acuerdo a la [disposición a pagar]{.blur}. Desde luego a mayor disposición mas oportunidad hay de compras y desde luego es una opción muy fuerte de convencer y de extraer el excedente del consumidor.
 :::
-:::
+::::
 
-:::{.fragment}
-- Valor `r fa("heart", fill="red")`
-- Funcionalidad `r fa("glass-cheers", fill="yellow")`
-- Adquisición `r fa("glass-martini", fill="blue")`
+::: fragment
+-   Valor `r fa("heart", fill="red")`
+-   Funcionalidad `r fa("glass-cheers", fill="yellow")`
+-   Adquisición `r fa("glass-martini", fill="blue")`
 :::
 
 ## Pilares de precios
 
-:::{.fragment}
-:::{.callout-tip}
+:::: fragment
+::: callout-tip
 ## Precios de referencia
+
 Los [clientes]{.alert} raramente toman decisiones con el solo precio. Tienen en cuenta múltiples formas, factores y maneras para finalmente [comprar]{.cupp} un producto o servicio. Cualquier detalle "extra" es plausible de ser tomado para cobrar un precio mayor y el cliente finalmente acepte, la comparación con los precios de la competencia será relevante.
 :::
-:::
+::::
 
-:::{.fragment}
-- Forma de pagos `r fa("google-pay", fill="green")`
-- Referencia `r fa("globe", fill="red")`
-- Justicia `r fa("gavel", fill="orange")`
+::: fragment
+-   Forma de pagos `r fa("google-pay", fill="green")`
+-   Referencia `r fa("globe", fill="red")`
+-   Justicia `r fa("gavel", fill="orange")`
 :::
 
 ## Pilares de precios
 
-:::{.fragment}
-:::{.callout-important}
+:::: fragment
+::: callout-important
 ## Proposición de valor
+
 El [valor]{.alert} adicional o agregado de un producto va envuelto en las condiciones de la forma de poder cobrar mas y así el **beneficio** sea mejor. Las empresas adicionan un punto que hace distinto el producto de las comparaciones comunes que aplican los consumidores/compradores.
 :::
-:::
+::::
 
-:::{.fragment}
-- Confianza `r fa("comments-dollar", fill="green")`
-- Referencia `r fa("coins", fill="red")`
-- Poder `r fa("hat-cowboy", fill="blue")`
-:::
-
-## Pilares de precios
-
-:::{.fragment}
-![](Vimage/rolesenin.png){width=60%}
+::: fragment
+-   Confianza `r fa("comments-dollar", fill="green")`
+-   Referencia `r fa("coins", fill="red")`
+-   Poder `r fa("hat-cowboy", fill="blue")`
 :::
 
 ## Pilares de precios
 
-:::{.fragment}
+::: fragment
+![](Vimage/rolesenin.png){width="60%"}
+:::
+
+## Pilares de precios
+
+::: fragment
 ![](Vimage/invprice.png)
 :::
 
 ## Ecosistema de precios
 
-:::{.fragment}
-![](Vimage/c4n2.png){width=80%}
+::: fragment
+![](Vimage/c4n2.png){width="80%"}
 :::
 
 ## Estipulación natural del precio
 
-:::{.fragment}
+::: fragment
 ![](Vimage/c4n3.png)
 :::
 
 ## Estipulación del precio en pilares
 
-:::{.fragment}
+::: fragment
 ![](Vimage/c4n1.png)
 :::
 
 ## Estipulación del precio creando valor
 
-:::{.fragment}
-![](Vimage/c4n4.png){width=80%}
+::: fragment
+![](Vimage/c4n4.png){width="80%"}
 :::
 
 ## Estipulación del precio creando valor
 
 ### Una segunda forma
 
-:::{.fragment}
+::: fragment
 ![](Vimage/c4primboun.png)
 :::
-
 
 ## Precios por visión
 
@@ -242,8 +244,7 @@ theme_gif <- theme_bw() + theme(
 wrapper <- function(x, ...) paste(strwrap(x, ...), collapse = "\n")
 ```
 
-:::{.fragment}
-
+::: fragment
 ```{r, mi1, echo = FALSE}
 data.frame(
   A = c("Chocolate", "Cappuccino", "Café Mocca", "Mocca con Chocolate Blanco", "Cappuccino 20onz"),
@@ -275,40 +276,41 @@ row_spec(1:5, extra_css = "line-height: 110%;") %>%
 column_spec(1, italic = T, color = met_slate)
 ```
 
-
 ## Generalidades
+
 ### A tener en cuenta
 
-:::{.incremental}
-- Cada [empresa]{.alert} implementa su estrategía de acuerdo a lo que observa que hacen los demás
-- Desde luego aquella que tiene mucho [poder de mercado]{.bg style="--col: #FFFF00"} estipula propiamente sus precios porque no hay competencia cerca e inclusive no la posee (caso monopolio).
-- La estrategia mas [fácil]{.oranger} es la que va por establecer el precio a partir de los costos y mark-up que posee.
+::: incremental
+-   Cada [empresa]{.alert} implementa su estrategía de acuerdo a lo que observa que hacen los demás
+-   Desde luego aquella que tiene mucho [poder de mercado]{.bg style="--col: #FFFF00"} estipula propiamente sus precios porque no hay competencia cerca e inclusive no la posee (caso monopolio).
+-   La estrategia mas [fácil]{.oranger} es la que va por establecer el precio a partir de los costos y mark-up que posee.
 :::
 
 ## Usando las ventas para evaluar
+
 ### Decisiones de precios
 
-:::{.incremental}
-- La idea que el [crecimiento de las ventas]{.reder} es la medida propia de las empresas, ya que esta estipulado en las mentes de los gerentes
-- Cuando se compara con otras [marcas]{.cupp} o competencia y algunas tienen que ver con el nivel de [lealtad]{.blur}
-- Si la empresa conoce su [beneficio marginal]{.oranger}, el deseo o cambio esperado en ventas será usado de forma [precisa]{.under}
+::: incremental
+-   La idea que el [crecimiento de las ventas]{.reder} es la medida propia de las empresas, ya que esta estipulado en las mentes de los gerentes
+-   Cuando se compara con otras [marcas]{.cupp} o competencia y algunas tienen que ver con el nivel de [lealtad]{.blur}
+-   Si la empresa conoce su [beneficio marginal]{.oranger}, el deseo o cambio esperado en ventas será usado de forma [precisa]{.under}
 :::
 
-# Pregunta !!  
-- Si se da un 10% de descuento del precio del lubricante que actualmente esta en $21.000 y hay un margen de ganancia estipulado del 50%. [¿Cuál es el incremento mínimo del volumen de ventas que necesitará la empresa para aumentar su beneficio sin afectar el nivel actual?]{.oranger}
+# Pregunta !!
 
-## Ventas{.smaller} 
+-   Si se da un 10% de descuento del precio del lubricante que actualmente esta en \$21.000 y hay un margen de ganancia estipulado del 50%. [¿Cuál es el incremento mínimo del volumen de ventas que necesitará la empresa para aumentar su beneficio sin afectar el nivel actual?]{.oranger}
 
-:::{.fragment}
-- Vamos a usar lo siguiente:
+## Ventas {.smaller}
+
+::: fragment
+-   Vamos a usar lo siguiente:
 :::
 
-:::{.fragment}
-- La formula es:
-$$\text{Volumen % de ventas}= \dfrac{\text{- Cambio %  en el precio}}{\text{Margen}+\text{Cambio % en el precio}}$$
+::: fragment
+-   La formula es: $$\text{Volumen % de ventas}= \dfrac{\text{- Cambio %  en el precio}}{\text{Margen}+\text{Cambio % en el precio}}$$
 :::
 
-:::{.fragment}
+::: fragment
 [Interpretación:]{.reder} Después que: $(-10\%/50\%+(-10\%))=25\%$ "Si hay un descuento del 10%, la estación de servicio debe incrementar el cambio de aceite (ventas) en un 25%".
 :::
 
@@ -318,108 +320,108 @@ $$\text{Volumen % de ventas}= \dfrac{\text{- Cambio %  en el precio}}{\text{Marg
 
 # Ingreso marginal
 
-Actualmente una empresa vende 40 jabones a un Precio de $100, pero la curva de demanda nos dice que para comprar un jabon adicional debemos bajar el precio a P=99. ¿Cuánto es el [ingreso marginal]{.under} de esa firma?
+Actualmente una empresa vende 40 jabones a un Precio de \$100, pero la curva de demanda nos dice que para comprar un jabon adicional debemos bajar el precio a P=99. ¿Cuánto es el [ingreso marginal]{.under} de esa firma?
 
 ## Ingreso marginal
 
-:::{.fragment}
+::: fragment
 > Aquel ingreso adicional que optiene la firma por vender una unidad adicional
 :::
 
-:::{.fragment}
-- Ingresos de antes: 40 x `$100`=`$4000`  
+::: fragment
+-   Ingresos de antes: 40 x `$100`=`$4000`\
 :::
 
-:::{.fragment}
+::: fragment
 Los ingresos de... ahora: 41 x `$99`=`$4059`
 :::
 
-:::{.fragment}
-El ingreso marginal es `$59`.
-Miren que el $Img < Precio$.
+::: fragment
+El ingreso marginal es `$59`. Miren que el $Img < Precio$.
 :::
 
-:::{.fragment .fade-up}
+::: {.fragment .fade-up}
 ¿Debe vender el jabon adicional?
 :::
 
 ## Segmentación en precio
 
-:::{.fragment}
-- Imagine lo **siguiente**:
+::: fragment
+-   Imagine lo **siguiente**:
 
-|              |DAP A  |DAP B  |
-|--------------|-------|-------|
-|Segmento X    |    30$|    125|
-|Segmento Y    |    50 |    100|
+|            | DAP A | DAP B |
+|------------|-------|-------|
+| Segmento X | 30\$  | 125   |
+| Segmento Y | 50    | 100   |
 :::
 
-:::{.fragment}
-- Note que los del segmento [X]{.oranger} valoran mucho mas el [producto B]{.bg style="--col: #4285F4"} que los del otro Segmento. Pero en cambio los del segmento [Y]{.reder} valoran mas el [producto A]{.bg style="--col: #FF8000"}.
+::: fragment
+-   Note que los del segmento [X]{.oranger} valoran mucho mas el [producto B]{.bg style="--col: #4285F4"} que los del otro Segmento. Pero en cambio los del segmento [Y]{.reder} valoran mas el [producto A]{.bg style="--col: #FF8000"}.
 :::
 
-:::{.fragment}
-- Como establecer el [precio]{.under} correcto para cada segmento?
+::: fragment
+-   Como establecer el [precio]{.under} correcto para cada segmento?
 :::
 
 ## Segmentación en precio
 
-:::{.fragment}
-Si el [producto A]{.bg style="--col: #FF8000"} se vende en `$50` solo el segmento [Y]{.reder} lo comprará y el beneficio por unidad será de `$50`.   
+::: fragment
+Si el [producto A]{.bg style="--col: #FF8000"} se vende en `$50` solo el segmento [Y]{.reder} lo comprará y el beneficio por unidad será de `$50`.
 :::
 
-:::{.fragment}
+::: fragment
 En cambio si lo vende en `$30` lo compraran ambos segmentos y su beneficio será de `$60`... va ganando por ahí
 :::
 
-:::{.fragment}
+::: fragment
 Ahora, si hacemos lo mismo con el [producto B]{.bg style="--col: #4285F4"} y se ofrece a un precio de `$100` la empresa ganará `$200` que en lugar de solo `$125`
 :::
 
-:::{.fragment}
+::: fragment
 Mire que si vende así, su ganancia total es de `$260`
 :::
 
 ## Segmentación en precio
 
-:::{.fragment}
+::: fragment
 Considera que es suficiente eso? puede la empresa hacer mas dinero `r fa ("money-bill-alt", fill="green")`?
 :::
 
-:::{.fragment}
+::: fragment
 La respuesta es si!!
 :::
 
-:::{.fragment}
-:::{.callout-warning}
+:::: fragment
+::: callout-warning
 ## Estrategia tipo cesta
+
 La empresa puede vender de forma [combinada]{.bg style="--col: #FFFF00"}, es decir, ofrecer ambos producto en combinación, paquete o comunmente le dicen "combo".
 :::
-:::
+::::
 
 ## Segmentación en precio
 
-:::{.fragment}
-Sumemos las valoraciones de cada segmento. El Grupo [X]{.oranger}  $30(A)+125(B)=155$ y para el segmento [Y]{.reder} es de $50(A)+100(B)=150$, entonces podemos [cobrar]{.under} un precio de `$150` y la empresa venderá (A+B) productos y de esa manera su ganancia por combo será de `$300` y este es mucho mejor beneficio que los `$260` que anteriormente ganaba.
+::: fragment
+Sumemos las valoraciones de cada segmento. El Grupo [X]{.oranger} $30(A)+125(B)=155$ y para el segmento [Y]{.reder} es de $50(A)+100(B)=150$, entonces podemos [cobrar]{.under} un precio de `$150` y la empresa venderá (A+B) productos y de esa manera su ganancia por combo será de `$300` y este es mucho mejor beneficio que los `$260` que anteriormente ganaba.
 :::
 
-:::{.fragment}
+::: fragment
 La noción de precios por suscripción y planes en combo es mucho mejor en la disponibilidad a pagar y ofrecer [paquetes]{.reder}. De esa manera extrae mejor el excedente de los consumidores.
 :::
 
 ## Ejercicio
 
-:::{.fragment}
-- Regresemos al ejemplo de la disponibilidad:
+::: fragment
+-   Regresemos al ejemplo de la disponibilidad:
 
-|              |DAP A  |DAP B  |
-|--------------|-------|-------|
-|Segmento X    |    30$|    160|
-|Segmento Y    |    40 |    140|
-|Segmento Z    |    60 |    130|
+|            | DAP A | DAP B |
+|------------|-------|-------|
+| Segmento X | 30\$  | 160   |
+| Segmento Y | 40    | 140   |
+| Segmento Z | 60    | 130   |
 :::
 
-:::{.fragment}
+::: fragment
 Qué estrategia de precios es correcta?
 :::
 
@@ -431,35 +433,39 @@ Qué estrategia de precios es correcta?
 
 ## Psicología de precios
 
-:::{.fragment}
-:::{.callout-note}
+:::: fragment
+::: callout-note
 ## Precio charming
+
 Es la preferencia de establecer [un dígito menos]{.reder} a la izquierda de la cifra. P.e: $3.00\;\rightarrow \;2.99$ o $13.000\;\rightarrow \;12.990$
 :::
-:::
+::::
 
-:::{.fragment}
-:::{.callout-tip}
+:::: fragment
+::: callout-tip
 ## Precio de prestigio
-Es la preferencia de establecer [un digito mas]{.reder} a la izquierda de la cifra. Es lo contrario a la definición anterior P.e: $4.99\;\rightarrow \;4.00$ o $15.990\;\rightarrow \;16.000$
+
+Es la preferencia de establecer [un digito mas]{.reder} a la izquierda de la cifra. Es lo contrario a la definición anterior P.e: $4.99\;\rightarrow \;5.00$ o $15.990\;\rightarrow \;16.000$
 :::
-:::
+::::
 
 ## Psicología de precios
 
-:::{.fragment .fade-in}
-:::{.callout-warning}
+:::: {.fragment .fade-in}
+::: callout-warning
 ## Pague 1 lleve 2
+
 Preferencia tradicional haciendo ver al consumidor que lleva una ganga. el objetivo de ofrecer la segunda unidad gratis cuando en realidad estan vendiendo un solo producto.
 :::
-:::
+::::
 
-:::{.fragment .fade-in}
-:::{.callout-caution}
-## Comparativo 
-Establecen dos productos [similares]{.alert} uno [al lado del otro ]{.bg style="--col: #FFFF00"} pero con precios diferentes. El consumidor al verse enfrente cree que es mejor llevarse la promoción
+:::: {.fragment .fade-in}
+::: callout-caution
+## Comparativo
+
+Establecen dos productos [similares]{.alert} uno [al lado del otro]{.bg style="--col: #FFFF00"} pero con precios diferentes. El consumidor al verse enfrente cree que es mejor llevarse la promoción
 :::
-:::
+::::
 
 ## Psicología de precios
 
@@ -467,15 +473,15 @@ Establecen dos productos [similares]{.alert} uno [al lado del otro ]{.bg style="
 
 ## Psicología de precios
 
-:::{.incremental}
-- Hay por comparación de [tamaño]{.blur}
-- Ubicación en estanteria
-- Lado derecho
-- Orden de menor a mayor
+::: incremental
+-   Hay por comparación de [tamaño]{.blur}
+-   Ubicación en estanteria
+-   Lado derecho
+-   Orden de menor a mayor
 :::
 
-:::{.fragment}
-![](Vimage/beeron.png){width=30%}
+::: fragment
+![](Vimage/beeron.png){width="30%"}
 :::
 
 # Trabajo
@@ -484,11 +490,11 @@ Establecen dos productos [similares]{.alert} uno [al lado del otro ]{.bg style="
 
 -   Piense en una estrategia de precios (escoja solo una) para cierto producto que desee impulsar o llevar al mercado
 
-- Prepárese a presentarla el día miércoles. Puede hacerlo inclusive con otra(s) persona(s) adicional (2 o 3 personas)
+-   Prepárese a presentarla el día jueves. es individual.
 
-- La sesión de sustentación es corta no puede excederse en tiempo
+-   La sesión de sustentación es corta no puede excederse en tiempo
 
-- Adjunte su poster en el brightspace
+-   Adjunte su poster en el brightspace
 
 ## Gracias! por su atención {.center}
 

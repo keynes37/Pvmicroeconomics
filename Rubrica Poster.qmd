@@ -1,0 +1,113 @@
+---
+title: "Rúbrica Poster"
+author: "Carlos A. Yanes Guerra"
+subtitle: "Principios de Microeconomía | Universidad del Norte"
+date: "2024-Intersemestral"
+format:
+    pdf: default
+    html: 
+      self-contained: true
+      grid: 
+        margin-width: 350px
+---
+
+```{r Setup, include = F}
+options(htmltools.dir.version = FALSE)
+library(pacman)
+p_load(broom, latex2exp, ggplot2, ggthemes, ggforce, viridis, dplyr, magrittr, knitr, parallel, gapminder, flextable)
+
+library(tidyverse)
+library(babynames)
+library(fontawesome) # from github: https://github.com/rstudio/fontawesome
+library(DiagrammeR)
+library(hrbrthemes)
+library(econocharts)
+library(plotly)
+
+# Definir colores
+red_pink <- "#e64173"
+met_slate <- "#272822" # metropolis font color 
+purple <- "#9370DB"
+green <- "#007935"
+light_green <- "#7DBA97"
+orange <- "#FD5F00"
+turquoise <- "#44C1C4"
+# Notes directory
+dir_slides <- "~/Documents/Trabajo en R/Con Mac/Microeconomics/pmicroeconomics/Files/Clase 1/"
+
+
+
+# Knitr options
+
+opts_chunk$set(
+  comment = "#>",
+  fig.align = "center",
+  fig.height = 7,
+  fig.width = 10.5,
+  warning = F,
+  message = F
+)
+
+theme_gif <- theme_bw() + theme(
+  axis.line = element_line(color = met_slate),
+  panel.grid = element_blank(),
+  rect = element_blank(),
+  text = element_text(family = "Fira Sans", color = met_slate, size = 17),
+  axis.text.x = element_text(size = 12),
+  axis.text.y = element_text(size = 12),
+  axis.ticks = element_blank()
+)
+wrapper <- function(x, ...) paste(strwrap(x, ...), collapse = "\n")
+```
+
+# Preambulo
+Una razón importante para usar una rúbrica en la **evaluación** de un póster académico es que proporciona criterios claros y específicos que permiten una evaluación justa y consistente. Esto asegura que todos los estudiantes sean evaluados bajo los mismos estándares, lo que fomenta la transparencia y la equidad en el proceso de evaluación. Además, una rúbrica ayuda a los estudiantes a entender mejor las expectativas y objetivos del proyecto, guiándolos en la creación de un trabajo de alta calidad y ayudándolos a identificar áreas de mejora.
+
+## Tabla Rúbrica
+
+```{r}
+#| echo: false
+#| message: false
+# Instalar y cargar las librerías necesarias
+library(tibble)
+library(knitr)
+library(kableExtra)
+
+# Crear los datos de la rúbrica usando tibble
+rubrica_data <- tibble::tibble(
+  Criterio = c("Diseño", "Presentación", "Contenido", "Ortografía y Gramática", "Manejo del Tiempo", "Uso de Palabras Clave"),
+  `Nivel 1 (0-2 puntos)` = c("El póster carece de un diseño claro; desorganizado y difícil de leer.",
+                             "La presentación fue desorganizada y difícil de seguir; falta de confianza.",
+                             "El contenido es inadecuado o irrelevante; falta de profundidad en el tema.",
+                             "Numerosos errores ortográficos y gramaticales que afectan la comprensión.",
+                             "Excedió significativamente el tiempo asignado o fue muy breve.",
+                             "No utilizó palabras clave relevantes para el tema."),
+  `Nivel 2 (3-5 puntos)` = c("El diseño es simple pero entendible; algunos elementos desorganizados.",
+                             "La presentación fue entendible pero careció de fluidez; algo de nerviosismo.",
+                             "El contenido es relevante pero superficial; algunos conceptos importantes no están cubiertos.",
+                             "Algunos errores ortográficos y gramaticales pero no afectan significativamente la comprensión.",
+                             "Se acercó al tiempo asignado pero excedió ligeramente o fue un poco breve.",
+                             "Utilizó algunas palabras clave pero no de manera consistente."),
+  `Nivel 3 (6-8 puntos)` = c("El diseño es claro y atractivo; bien organizado con algunos elementos creativos.",
+                             "La presentación fue clara y fluida; el presentador mostró confianza.",
+                             "El contenido es relevante y bien desarrollado; cubre la mayoría de los conceptos importantes.",
+                             "Pocos errores ortográficos y gramaticales; la comprensión no se ve afectada.",
+                             "Cumplió con el tiempo asignado, con una ligera desviación.",
+                             "Utilizó palabras clave de manera consistente y adecuada."),
+  `Nivel 4 (9-10 puntos)` = c("El diseño es excepcionalmente atractivo, bien organizado y muy creativo.",
+                              "La presentación fue excepcionalmente clara, fluida y profesional; el presentador mostró gran confianza.",
+                              "El contenido es muy relevante, completo y bien desarrollado; cubre todos los conceptos importantes con profundidad.",
+                              "Sin errores ortográficos ni gramaticales; excelente uso del lenguaje.",
+                              "Cumplió perfectamente con el tiempo asignado.",
+                              "Utilizó palabras clave de manera muy efectiva, mejorando la comprensión del tema.")
+)
+
+# Crear la tabla kable en formato LaTeX para PDF
+kable_table <- knitr::kable(rubrica_data, format = "latex", booktabs = TRUE, 
+                            caption = "Rúbrica de Evaluación de Póster") %>%
+  kableExtra::kable_styling(full_width = TRUE, position = "center") %>%
+  kableExtra::add_header_above(c(" " = 1, "Nivel 1 (0-2 puntos)" = 1, "Nivel 2 (3-5 puntos)" = 1, "Nivel 3 (6-8 puntos)" = 1, "Nivel 4 (9-10 puntos)" = 1))
+
+# Mostrar la tabla
+kable_table
+```
