@@ -1,5 +1,5 @@
 # Pvmicroeconomics
-Course elements in virtual season (quarto style) P3
+Course elements in virtual season (quarto style) P2026
 
 ## Season star
 
