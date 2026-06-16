@@ -26,23 +26,19 @@ library(babynames)
 library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 library(DiagrammeR)
 library(hrbrthemes)
-library(econocharts)
+#library(econocharts)
 library(plotly)
 
 # Definir colores
 red_pink <- "#e64173"
-met_slate <- "#272822" # metropolis font color 
+met_slate <- "#272822"
 purple <- "#9370DB"
 green <- "#007935"
 light_green <- "#7DBA97"
 orange <- "#FD5F00"
 turquoise <- "#44C1C4"
-# Notes directory
+
 dir_slides <- "~/Documents/Trabajo en R/Con Mac/Microeconomics/pmicroeconomics/Files/Clase 1/"
-
-
-
-# Knitr options
 
 opts_chunk$set(
   comment = "#>",
@@ -87,61 +83,92 @@ wrapper <- function(x, ...) paste(strwrap(x, ...), collapse = "\n")
 
 ## Esquema del Curso
 
--   Clases online: [la asistencia a ellas es muy importante]{.bg style="--col: #FFFF00"}
--   Notas y calificaciones:
+- Curso **intensivo**: 16 sesiones, 17 de junio — 9 de julio de 2026
+- Clases online: [la asistencia a ellas es muy importante]{.bg style="--col: #FFFF00"}
+- Notas y calificaciones:
 
 ::: fragment
 Un cuadro que requiere de [atención]{.fg style="--col: #FF0000"} 🧐
 
-| Requerimientos     | Fechas        | Ponderador     |
-|--------------------|---------------|----------------|
-| Actividades I y II | Referenciadas | 20% (cada uno) |
-| Autoevaluación     | A solicitud   | 10%            |
-| Talleres           | A solicitud   | 20%            |
-| Examen final       | Por registro  | 30%            |
+| Requerimientos     | Fechas          | Ponderador     |
+|--------------------|-----------------|----------------|
+| Actividades I y II | Jun 26 / Jul 3  | 20% (cada uno) |
+| Autoevaluación     | Jul 8           | 10%            |
+| Talleres (3)       | Ses. 4, 7 y 11  | 20%            |
+| Examen final       | Jul 9           | 30%            |
 
 ♠ Las [notas]{.fg style="--col: #FF8000"} son totalmente individuales
 :::
 
 ## Esquema del Curso
 
--   Dedicado a analizar y presentar datos e información de microeconomía.
--   Las clases tienen [Ejemplos]{.fg style="--col: #FF8000"}, *explicación o claridad* de ejercicios y desde luego la parte de [Actividades]{.fg style="--col: #FF8000"} que deben desarrollar cada uno de los estudiantes.
--   El aprendizaje es autonomo. No es un [curso]{.alert} mas como -*los cursos de pandemia*-
--   Se requiere por **obligación** hacer uso de `r fa('video')` cuando interactue con el profesor.
--   Por ello, [este curso]{.fg style="--col: #FF8000"} combinará [principios teóricos]{.fg style="--col: #0000FF"} con análisis del mundo real. De este modo, podremos tener una vista mas general.
+- Dedicado a analizar y presentar datos e información de microeconomía.
+- Las clases tienen [Ejemplos]{.fg style="--col: #FF8000"}, *explicación o claridad* de ejercicios y desde luego la parte de [Actividades]{.fg style="--col: #FF8000"} que deben desarrollar cada uno de los estudiantes.
+- El aprendizaje es autónomo. No es un [curso]{.alert} más como -*los cursos de pandemia*-
+- Se requiere por **obligación** hacer uso de `r fa('video')` cuando interactúe con el profesor.
+- [Este curso]{.fg style="--col: #FF8000"} combinará [principios teóricos]{.fg style="--col: #0000FF"} con análisis del mundo real y **finanzas personales**.
+
+## Esquema del Curso — Módulos
+
+| Módulo | Tema                        | Fechas          |
+|--------|-----------------------------|-----------------|
+| 1      | ¿Cómo decidimos?            | Jun 17–22       |
+| 2      | Mercados y precios          | Jun 23–26       |
+| 3      | Tu dinero, tus decisiones   | Jun 30–Jul 3    |
+| 4      | Cuando los mercados fallan  | Jul 6–9         |
+
+::: fragment
+`r fa("exclamation-triangle", fill="orange")` El **29 de junio** es festivo — no hay sesión.
+:::
 
 ## Esquema del Curso
 
 Lo que debe hacer siempre
 
-::: columns
-::: {.column width="47.5%"}
+::::::::: columns
+:::: {.column width="47.5%"}
 ::: {style="text-align: center;"}
 ![](Vimage/study.png){fig-align="center"} [{{< fa brands cc-visa >}}]{style="font-size: 100px;color: #3564B1"}
 :::
-:::
+::::
 
-::: {.column width="5%"}
+:::: {.column width="5%"}
 ::: {style="text-align: center; font-size: 40px;"}
 <br><br> {{< fa arrow-right >}}
 :::
-:::
+::::
 
-::: {.column width="47.5%"}
+:::: {.column width="47.5%"}
 ::: {style="text-align: center; font-size: 190px;"}
 [{{< fa brands wpforms >}}]{style="color: #d35836"}
 :::
-:::
+::::
+:::::::::
+
+Leer cada una de las partes del curso en Brightspace, desarrollar las actividades y estar pendientes de las explicaciones.
+
+## Esquema del Curso — Regla de oro ✍️
+
+::: fragment
+> Este curso tiene actividades que se escriben **a mano**, en hoja limpia. Se escanean y se entregan digitalmente.
 :::
 
-P.e. Leer cada una de las partes del curso situadas en el Brightspace, desarrollar las actividades (hacer controles) y estar pendientes de las explicaciones.
+::: fragment
+`r fa("robot", fill="red")` El uso de IA para producir tus respuestas es [falta académica]{.alert}.
+
+`r fa("pen", fill="blue")` Lo que se evalúa es **tu** razonamiento, no el de una máquina.
+:::
+
+::: fragment
+[La escritura manual es parte del aprendizaje — no un castigo]{.bg style="--col: #FFFF00"}
+:::
 
 ## Esquema del Curso
 
 ```{=html}
 <iframe src="https://openstax.org/details/books/principles-microeconomics-3e" title="Libro de interacción: Principios de Microeconomía" width="1100px" height="600px"></iframe>
 ```
+
 # Preliminar
 
 ## Economía
@@ -155,7 +182,7 @@ El agua, los bosques, el cobre, los osos pandas, el aire limpio.
 :::
 
 ::: fragment
-El tiempo, la calidad de de vida (*medido en esperanza*), la concentración.
+El tiempo, la calidad de vida (*medido en esperanza*), la concentración.
 :::
 
 ::: fragment
@@ -165,7 +192,7 @@ El tiempo, la calidad de de vida (*medido en esperanza*), la concentración.
 :::
 
 ::: fragment
--   Sin embargo... por lo pronto nos las arreglamos
+- Sin embargo... por lo pronto nos las arreglamos
 :::
 
 # El tema de la escasez
@@ -181,26 +208,30 @@ El tiempo, la calidad de de vida (*medido en esperanza*), la concentración.
 :::
 
 ::: fragment
-`r fa("user-tie", fill="grey")` Qué señales de escasez percibe usted?, que indicador es el mas apropiado para medirla?
+`r fa("user-tie", fill="grey")` ¿Qué señales de escasez percibe usted? ¿Qué indicador es el más apropiado para medirla?
+:::
+
+::: fragment
+[Actividad: Escriba en su hoja **dos** bienes escasos en su vida cotidiana y explique por qué los considera escasos — 5 minutos]{.bg style="--col: #dcdcdc"}
 :::
 
 ## Economía
 
 ### Como nos organizamos
 
--   En teoría buscamos responder a tres (3) preguntas fundamentales:
+- En teoría buscamos responder a tres (3) preguntas fundamentales:
 
 ::: fragment
-1.  Qué [producir]{.alert}?
-2.  Cómo [producirlo]{.blut}?
-3.  Para quién [producir]{.oranger}?
+1.  ¿Qué [producir]{.alert}?
+2.  ¿Cómo [producirlo]{.blut}?
+3.  ¿Para quién [producir]{.oranger}?
 :::
 
-::: fragment
+:::: fragment
 ::: callout-tip
 La forma en que las sociedades actúan ante estas cuestiones tiene importantes consecuencias para mitigar los costos de la escasez.
 :::
-:::
+::::
 
 # Piense ahora en lo siguiente
 
@@ -260,46 +291,48 @@ Un par de dichos:
 
 ## Descripción
 
-::: fragment
+:::: fragment
 ::: callout-note
 ## Importante
 
-Este **curso** proporciona una introducción a la microeconomía, centrado exclusivamente en los conceptos de la economía en general utilizando elementos básicos de **cálculo diferencial** 😢 y de alguna manera de la [estadística]{.oranger} 😬
+Este **curso** proporciona una introducción a la microeconomía integrando **economía del comportamiento** y **finanzas personales**. Se usan elementos básicos de cálculo diferencial 😢 y estadística 😬
 :::
-:::
+::::
 
 ::: fragment
-`r fa("exclamation-triangle")` Se hace énfasis en el lenguaje [matemático]{.blut}.
+`r fa("exclamation-triangle")` Se hace énfasis en el lenguaje [matemático]{.blut} y en decisiones [reales]{.fg style="--col: #FF8000"}.
 :::
 
 ## [Todo esto es raro...]{style="font-size: 80px; font-family: Brusher;"} {.center}
 
 ::: incremental
--   **Economía**: *Un sistema donde se coordinan las actividades productivas de una sociedad*
+- **Economía**: *Un sistema donde se coordinan las actividades productivas de una sociedad*
 
--   **Economía de Mercado**: *Es una economía donde se toman decisiones de producción y consumo de bienes y servicios*
+- **Economía de Mercado**: *Es una economía donde se toman decisiones de producción y consumo de bienes y servicios*
 
--   **Mano invisible**: *La forma en la cual los individuos persiguen a como de lugar su propio bienestar, sin embargo eso conlleva a resultados mejores para una sociedad como un todo*
+- **Mano invisible**: *La forma en la cual los individuos persiguen a como de lugar su propio bienestar, sin embargo eso conlleva a resultados mejores para una sociedad como un todo*
+
+- **Economía conductual**: *Estudia por qué los individuos no siempre deciden de forma racional — y qué consecuencias tiene eso*
 :::
 
 # Qué es la Microeconomía?
 
 ## Microeconomía
 
-::: fragment
+:::: fragment
 ::: callout-note
 ## Microeconomía
 
-tiene que ver con entender el comportamiento "individual".
+Tiene que ver con entender el comportamiento "individual".
 :::
-:::
+::::
 
 ::: fragment
 `r fa("rocket", fill="blue")` **Consumidores** *Tienen decisiones de compra*
 :::
 
 ::: fragment
-[Ejemplo: Si su cantante (artista) favorito llega a la ciudad, compraría una boleta en \$797.000?]{.bg style="--col: #dcdcdc"}
+[Ejemplo: Si su cantante (artista) favorito llega a la ciudad, ¿compraría una boleta en $797.000?]{.bg style="--col: #dcdcdc"}
 :::
 
 ## Microeconomía
@@ -309,36 +342,64 @@ tiene que ver con entender el comportamiento "individual".
 :::
 
 ::: fragment
--   Cuantos trabajadores vas a contratar y cuanto de maquinaria vas adquirir?
+- ¿Cuántos trabajadores vas a contratar y cuánto de maquinaria vas a adquirir?
 :::
 
 ::: fragment
-`r fa("rocket", fill="grey")` **Reguladores** *El estado puede anticipar cuantas firmas y consumidores habrá en los distintos mercados*
+`r fa("rocket", fill="grey")` **Reguladores** *El estado puede anticipar cuántas firmas y consumidores habrá en los distintos mercados*
 :::
 
 ::: fragment
-Pueden las herramientas de política pública, tales como los impuestos, tasas, sobretasas ser beneficiosos para la sociedad?
+¿Pueden las herramientas de política pública, tales como los impuestos, tasas, sobretasas ser beneficiosas para la sociedad?
 :::
 
 ## Microeconomía
 
 ::: fragment
-> El comportamiento de los *agentes económicos* es investigado bajo la hipotesis de la **Racionalidad**:
+> El comportamiento de los *agentes económicos* es investigado bajo la hipótesis de la **Racionalidad**:
 :::
 
 ::: incremental
--   Cada *agente* busca [maximizar]{.blut} su bienestar (p.e., la utilidad de los consumidores, o beneficios de la empresa), dados ciertos recursos (restricciones) y la información con la que se cuenta o se tiene acceso.
--   `r fa("plane", fill="grey")` Cuando un agente busca maximizar su propio bienestar (sobre todo el material) y no le interesa lo demás.
--   `r fa("plane", fill="blue")` Cuando maximiza su bienestar y el de otros agentes (permitiendo incluso el altruismo).
+- Cada *agente* busca [maximizar]{.blut} su bienestar (p.e., la utilidad de los consumidores, o beneficios de la empresa), dados ciertos recursos (restricciones) y la información con la que se cuenta o se tiene acceso.
+- `r fa("plane", fill="grey")` Cuando un agente busca maximizar su propio bienestar (sobre todo el material) y no le interesa lo demás.
+- `r fa("plane", fill="blue")` Cuando maximiza su bienestar y el de otros agentes (permitiendo incluso el altruismo).
+:::
+
+## Microeconomía
+
+::: fragment
+[Pero... ¿siempre somos racionales?]{.bg style="--col: #FFFF00"} — Esta pregunta nos acompañará todo el curso.
+:::
+
+# Actividad de cierre — Sesión 1
+
+## Mapa de decisiones ✍️ {.center}
+
+::: fragment
+En una hoja limpia escriba lo siguiente:
+:::
+
+::: incremental
+1. **Una decisión económica** que tomó esta semana (compra, ahorro, deuda, tiempo).
+2. **Qué criterio usó** para tomarla — ¿fue completamente racional?
+3. **Qué habría hecho diferente** si hubiera tenido más información.
+:::
+
+::: fragment
+`r fa("clock", fill="orange")` Tiempo: **10 minutos**. Escanee o fotografíe su hoja y súbala al Brightspace antes de la próxima sesión.
+:::
+
+::: fragment
+> Esta es la base de todo lo que veremos: *sus propias decisiones son el laboratorio del curso.*
 :::
 
 # Trabajo
 
 ## Trabajo de clase
 
--   Lea a continuación lo siguiente: [Cap 1: Qué es la economía y su importancia](https://openstax.org/books/principles-microeconomics-3e/pages/1-1-what-is-economics-and-why-is-it-important)
+- Lea a continuación lo siguiente: [Cap 1: Qué es la economía y su importancia](https://openstax.org/books/principles-microeconomics-3e/pages/1-1-what-is-economics-and-why-is-it-important)
 
--   Regrese a la sesión a la hora que le manifieste el profesor. No sin antes de responder las preguntas del [control 1](https://cursos.uninorte.edu.co/d2l/lms/quizzing/admin/quizzes_manage.d2l?ou=106306)
+- Regrese a la sesión a la hora que le manifieste el profesor. No sin antes de responder las preguntas del [control 1](https://cursos.uninorte.edu.co/d2l/lms/quizzing/admin/quizzes_manage.d2l?ou=106306)
 
 ## Gracias! por su atención {.center}
 
@@ -354,8 +415,12 @@ Slides de la clase:
 
 `r fa('book')` Mankiw, N. G. (2005). *Principios de microeconomía* /N. Gregory Mankiw (No. 338.5 M55Y.).
 
-`r fa('book')` Pindyck, R. S., Rubinfeld, D. L., & Rabasco, E. (2013). *Microeconomía*. Pearson Italia..
+`r fa('book')` Pindyck, R. S., Rubinfeld, D. L., & Rabasco, E. (2013). *Microeconomía*. Pearson Italia.
 
 `r fa('book')` Krugman, P., & Wells, R. (2014). *Microeconomics (for AP)*. New York: Worth Publishers.
 
 `r fa('book')` Muñoz-Garcia, F. (2017). *Advanced microeconomic theory: an intuitive approach with examples*. MIT Press.
+
+`r fa('book')` Thaler, R. & Sunstein, C. (2008). *Nudge*. Penguin Books.
+
+`r fa('book')` Kahneman, D. (2011). *Thinking, Fast and Slow*. Farrar, Straus and Giroux.
