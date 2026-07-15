@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<script src="ClacsoPress_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ClacsoPress_files/libs/quarto-html/tabby.min.js"></script>
+<script src="ClacsoPress_files/libs/quarto-html/popper.min.js"></script>
+<script src="ClacsoPress_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="ClacsoPress_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ClacsoPress_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="ClacsoPress_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.36">
+
+  <meta name="author" content="Departamento de Economía">
+  <title>Desigualdad de ingresos en Colombia y América Latina</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="ClacsoPress_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="ClacsoPress_files/libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="ClacsoPress_files/libs/revealjs/dist/theme/quarto-7bd254c9118263f92b319de3d012a0fb.css">
+  <link href="ClacsoPress_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="ClacsoPress_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="ClacsoPress_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="ClacsoPress_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Desigualdad de ingresos en <br>Colombia y América Latina</h1>
+  <p class="subtitle">Medición, determinantes y políticas públicas para su reducción</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Departamento de Economía 
+</div>
+        <p class="quarto-title-affiliation">
+            OCSA · CLACSO
+          </p>
+    </div>
+</div>
+
+  <p class="date">julio 2026</p>
+</section>
+<section id="presentación" class="slide level2 cv-slide">
+<h2>Presentación</h2>
+<div class="columns">
+<div class="column" style="width:26%;">
+<p><img data-src="images/foto_profe.png" class="cv-photo"></p>
+<div class="cv-name">
+<p>Carlos Andrés Yanes Guerra</p>
+</div>
+<div class="cv-role">
+<p>Director del OCSA</p>
+</div>
+</div><div class="column" style="width:74%;">
+<div class="cv-row">
+<p>🎓 Profesor Asistente, Departamento de Economía</p>
+</div>
+<div class="cv-row">
+<p>📉 Enfocado en Microeconomía, Econometría y Ciencia de Datos</p>
+</div>
+<div class="cv-row">
+<p>👤 <a href="https://www.linkedin.com/in/carlos-andres-yanes-guerra-0026bb31/?originalSubdomain=co">Carlos Andrés Yanes Guerra</a></p>
+</div>
+<div class="cv-row">
+<p>𝕏 <a href="https://x.com/keynes37"><span class="citation" data-cites="Keynes37">@Keynes37</span></a></p>
+</div>
+<div class="cv-row">
+<p>✉️ <a href="mailto:cayanes@uninorte.edu.co">cayanes@uninorte.edu.co</a></p>
+</div>
+<div class="cv-row">
+<p>💻 <a href="https://github.com/keynes37">GitHub</a></p>
+</div>
+<div class="cv-row">
+<p>🎓 <a href="https://scholar.google.com/citations?user=NlFSQDwAAAAJ&amp;hl=es">Google Scholar</a></p>
+</div>
+</div></div>
+</section>
+<section id="contenido" class="slide level2">
+<h2>Contenido</h2>
+<div style="font-size: 1.2em; line-height: 1.9;">
+<ul>
+<li class="fragment">La desigualdad como problema regional.</li>
+<li class="fragment">América Latina y Colombia en cifras: niveles y tendencias.</li>
+<li class="fragment">¿Qué explica la desigualdad en la región?</li>
+<li class="fragment">Políticas públicas para reducir la desigualdad.</li>
+<li class="fragment">Conclusiones y reflexiones finales.</li>
+</ul>
+</div>
+</section>
+<section>
+<section id="la-desigualdad-de-ingresos-como-problema-regional" class="title-slide slide level1 section-slide center" data-section-number="01">
+<h1>La desigualdad de ingresos <br>como problema regional</h1>
+
+</section>
+<section id="la-alta-desigualdad-en-la-región" class="slide level2">
+<h2>La alta desigualdad en la región</h2>
+<div style="font-size: 1.15em; line-height: 1.5;">
+<p>América Latina enfrenta una desigualdad estructural que limita el crecimiento, debilita la cohesión social y afecta las instituciones. Superarla requiere no solo crecimiento económico, sino políticas públicas orientadas a un desarrollo más inclusivo.</p>
+</div>
+<div class="source">
+<p>Fuente: CEPAL, Panorama Social de América Latina y el Caribe 2025.</p>
+</div>
+</section>
+<section id="desigualdad-estructural-datos-clave" class="slide level2 incremental">
+<h2>Desigualdad estructural: datos clave</h2>
+<div style="font-size: 0.8em; line-height: 1.4; display: grid; grid-template-columns: 1fr 1fr; gap: 1em; height: 470px;">
+<div class="kpi-box">
+<p><strong>🌎 Desigualdad de ingresos</strong> <span class="big-number">0,40-0,70</span> <span class="big-number-label">rango del Gini en la región</span></p>
+</div>
+<div class="kpi-box">
+<p><strong>📊 Lo que las encuestas no ven</strong> <span class="big-number">+17pp</span> <span class="big-number-label">sube el Gini al sumar ingresos de capital y de los más ricos</span></p>
+</div>
+<div class="kpi-box">
+<p><strong>🗺️ Desigualdad entre países</strong> <span class="big-number">~8%</span> <span class="big-number-label">de la desigualdad regional; el resto es dentro de cada país</span></p>
+</div>
+<div class="kpi-box">
+<p><strong>🎓 Desigualdad de oportunidades</strong></p>
+<ul>
+<li class="fragment">Bloquea la movilidad social</li>
+<li class="fragment">El capital humano es el factor más determinante</li>
+</ul>
+</div>
+</div>
+<div style="margin-top: 0.6em;">
+<div class="source">
+<p>Fuente: Alvaredo, Bourguignon, Ferreira y Lustig (2023), <em>Seventy-five Years of Measuring Income Inequality in Latin America</em>, BID — 1948-2021 (75 años), 34 países de América Latina y el Caribe.</p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="américa-latina-y-colombia-en-cifras-niveles-y-tendencias" class="title-slide slide level1 section-slide center" data-section-number="02">
+<h1>América Latina y Colombia <br>en cifras: niveles y tendencias</h1>
+
+</section>
+<section id="coeficiente-de-gini-en-el-mundo" class="slide level2">
+<h2>Coeficiente de Gini en el mundo</h2>
+<iframe src="https://archive.ourworldindata.org/20260703-175051/grapher/economic-inequality-gini-index.html?tab=table&amp;time=1990..latest" loading="lazy" style="width: 100%; height: 500px; border: 0px none;" allow="web-share; clipboard-write">
+</iframe>
+</section>
+<section id="tendencia-reciente-coeficiente-de-gini-en-américa-latina" class="slide level2">
+<h2>Tendencia reciente: Coeficiente de Gini en América Latina</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<ul>
+<li class="fragment"><p><em>Colombia</em> es uno de los países más desiguales del mundo.</p></li>
+<li class="fragment"><p><em>América Latina</em> ha reducido gradualmente la desigualdad desde inicios de los 2000s, aunque mantiene niveles elevados. Colombia permanece rezagada mientras se aleja de la tendencia regional, con niveles de desigualdad prácticamente idénticos a los de hace 30 años.</p></li>
+</ul>
+</div><div class="column" style="width:67%;">
+<iframe src="charts/gini_interactive.html" style="width: 100%; height: 480px; border: 0px none;">
+</iframe>
+<div class="source">
+<p>Fuente: CEPALSTAT, elaboración propia.</p>
+</div>
+</div></div>
+</section>
+<section id="una-mirada-más-de-cerca" class="slide level2">
+<h2>Una mirada más de cerca</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div style="font-size: 0.8em; line-height: 1.3;">
+<p><strong>Ranking mundial</strong></p>
+<ul>
+<li class="fragment">Colombia: #1 (más desigual)</li>
+<li class="fragment">Brasil: #2</li>
+<li class="fragment">Chile: #8</li>
+<li class="fragment">Ecuador/Paraguay: #6-9</li>
+<li class="fragment">Argentina: #10</li>
+<li class="fragment">Uruguay/Perú: #12-15 (menos desiguales)</li>
+</ul>
+<div style="font-size: 0.75em; color: #857a70; margin-top: 0.5em;">
+<p><em>Nota: 2021 incluye 80+ países; 2024 tiene ~30 países.</em></p>
+</div>
+</div>
+</div><div class="column" style="width:67%;">
+<iframe src="charts/gini_desglose.html" style="width: 100%; height: 480px; border: 0px none;">
+</iframe>
+<div class="source">
+<p>Fuente: CEPALSTAT, elaboración propia.</p>
+</div>
+</div></div>
+</section>
+<section id="índice-de-theil-un-reflejo-de-lo-mismo" class="slide level2">
+<h2>Índice de Theil: Un reflejo de lo mismo</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div style="font-size: 0.85em; line-height: 1.4;">
+<p><strong>Indicador complementario</strong></p>
+<p>El Índice de Theil mide la desigualdad de forma alternativa al Gini, otorgando más peso a las colas de las distribuciones.</p>
+<ul>
+<li class="fragment">Colombia nuevamente muestra ser el más desigual de América Latina, pero con una brecha más amplia frente a otros países según este indicador.</li>
+</ul>
+</div>
+</div><div class="column" style="width:65%;">
+<div style="width: 100%; height: 520px; overflow-x: auto; overflow-y: hidden;">
+<div style="width: 120%; height: 500px;">
+<iframe src="charts/theil_index.html" style="width: 100%; height: 100%; border: 0px none;">
+</iframe>
+</div>
+</div>
+<div class="source">
+<p>Fuente: CEPALSTAT, elaboración propia.</p>
+</div>
+</div></div>
+</section>
+<section id="índice-de-theil-un-análisis-de-las-disparidades-territoriales-en-colombia" class="slide level2">
+<h2>Índice de Theil: un análisis de las disparidades <br>territoriales en Colombia</h2>
+<div class="columns">
+<div class="column" style="width:62%;">
+<p><img data-src="images/trabajo_chaves_theil.jpg" style="width:100.0%"></p>
+</div><div class="column" style="width:38%;">
+<div style="font-size: 0.72em; line-height: 1.4;">
+<ul>
+<li class="fragment"><strong>Compartir departamento no implica compartir condiciones</strong>: municipios como Valledupar y Pueblo Bello (Cesar) presentan una brecha de 44 puntos porcentuales en pobreza extrema.</li>
+<li class="fragment"><strong>Las políticas departamentales pueden pasar por alto a los más rezagados</strong>: diseñar intervenciones con base en promedios departamentales puede invisibilizar las necesidades de los municipios con mayores privaciones.</li>
+</ul>
+</div>
+<div class="source">
+<p>Fuente: <a href="https://x.com/achavito">Alvaro Chaves</a>, Working Paper, 2026.</p>
+</div>
+</div></div>
+</section>
+<section id="participación-en-los-ingresos-nacionales" class="slide level2">
+<h2>Participación en los ingresos nacionales</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 0.9em; line-height: 1.8;">
+<p><strong>1% de mayores ingresos</strong></p>
+<p><a href="https://wid.world/share/#1/countriesmap/sptinc_p99p100_z/all/last/eu/k/p/yearly/s/false/18.271/35/curve/false/region" target="_blank">Explorar →</a></p>
+<p><strong>10% de mayores ingresos</strong></p>
+<p><a href="https://wid.world/share/#1/countriesmap/sptinc_p90p100_z/all/last/eu/k/p/yearly/s/false/18.271/35/curve/false/region" target="_blank">Explorar →</a></p>
+<p><strong>50% de menores ingresos</strong></p>
+<p><a href="https://wid.world/share/#1/countriesmap/sptinc_p0p50_z/all/last/eu/k/p/yearly/s/false/18.271/35/curve/false/region" target="_blank">Explorar →</a></p>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="font-size: 0.95em; line-height: 1.6;">
+<ul>
+<li class="fragment"><p>En América Latina, el 1 % de la población con mayores ingresos concentra, en promedio, <strong>una cuarta parte</strong> del ingreso total de la región.</p></li>
+<li class="fragment"><p>En Colombia, el 10% de la población con mayores ingresos concentra <strong>más de la mitad</strong> del ingreso nacional.</p></li>
+<li class="fragment"><p>Mientras tanto, la mitad de la población con menores ingresos percibe <strong>menos del 10%</strong> del ingreso nacional.</p></li>
+<li class="fragment"><p>En términos generales, Colombia no difiere mucho del promedio latinoamericano en este aspecto, aunque presenta niveles de desigualdad ligeramente superiores a los de la mayoría de los países de la región.</p></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="lo-más-reciente-cifras-de-2024" class="slide level2 incremental">
+<h2>Lo más reciente: cifras de 2024</h2>
+<div style="font-size: 0.78em; line-height: 1.35; display: grid; grid-template-columns: 1fr 1fr; gap: 1em; height: 470px;">
+<div class="kpi-box">
+<p><strong>🇨🇴 Gini Colombia 2024</strong> <span class="big-number">0,551</span> <span class="big-number-label">vs.&nbsp;0,553 en 2023 — mejora marginal, sigue entre los más altos del mundo</span></p>
+</div>
+<div class="kpi-box">
+<p><strong>📉 Pobreza monetaria Colombia</strong> <span class="big-number">31,8%</span> <span class="big-number-label">-2,8pp frente a 2023; la mayor caída desde 2012 (DANE)</span></p>
+</div>
+<div class="kpi-box">
+<p><strong>🌎 Gini regional 2024</strong> <span class="big-number">0,452</span> <span class="big-number-label">vs.&nbsp;0,456 en 2023; pobreza regional baja de 27,7% a 25,5% (CEPAL)</span></p>
+</div>
+<div class="kpi-box">
+<p><strong>🧩 Palanca pendiente</strong> <span class="big-number">-14%</span> <span class="big-number-label">caería el Gini regional con formalización laboral plena (CEPAL)</span></p>
+</div>
+</div>
+<div style="margin-top: 0.6em;">
+<div class="source">
+<p>Fuente: DANE, Boletín Técnico Pobreza Monetaria 2024; CEPAL, Panorama Social de América Latina y el Caribe 2025.</p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="qué-explica-la-desigualdad-en-la-región" class="title-slide slide level1 section-slide center" data-section-number="03">
+<h1>¿Qué explica la desigualdad <br>en la región?</h1>
+
+</section>
+<section id="el-comportamiento-de-la-desigualdad-en-a.-latina-síntesis-de-la-literatura" class="slide level2">
+<h2>El comportamiento de la desigualdad <br>en A. Latina: Síntesis de la literatura</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<div style="font-size: 0.68em; line-height: 1.3;">
+<ul>
+<li class="fragment">Es más desigual de lo que le tocaría por su nivel de desarrollo. <span class="muted">(Gasparini et al., 2013)</span></li>
+<li class="fragment">La concentración está arriba, justo donde las encuestas no ven bien. <span class="muted">(Alvaredo et al., 2023)</span></li>
+<li class="fragment">Subió con los ajustes y reformas de mercado de los 80-90; bajó en los 2000 por más transferencias y salario mínimo. <span class="muted">(Alvaredo et al., 2023)</span></li>
+<li class="fragment">Cae el premio a la educación cuando la oferta de gente calificada crece más rápido que la demanda tecnológica por ella — y sube cuando pasa al revés. <span class="muted">(Bonilla Mejía, 2011)</span></li>
+<li class="fragment">Raíces coloniales (tierra e instituciones extractivas), aunque su peso exacto hoy se discute. <span class="muted">(Stezano, 2020)</span></li>
+<li class="fragment">Perdió ventaja comercial frente a Asia y la antigua URSS, y no acumuló capital humano ni físico a tiempo. <span class="muted">(Stezano, 2020)</span></li>
+<li class="fragment">Las élites capturan las instituciones y bloquean la redistribución — y esa misma desigualdad les da más poder para sostenerlo. <span class="muted">(Stezano, 2020)</span></li>
+</ul>
+</div>
+</div><div class="column" style="width:35%;">
+<div style="display:flex; flex-direction:column; justify-content:flex-start; align-items:center; gap:0;">
+<p><img data-src="images/articulos.png" width="320"></p>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="políticas-públicas-para-reducir-la-desigualdad-en-colombia-y-la-región" class="title-slide slide level1 section-slide center" data-section-number="04">
+<h1>Políticas públicas para reducir <br>la desigualdad en Colombia y la región</h1>
+
+</section>
+<section id="políticas-públicas-frente-a-la-desigualdad-en-américa-latina" class="slide level2">
+<h2>Políticas públicas frente a la desigualdad <br>en América Latina</h2>
+<div class="columns">
+<div class="column" style="width:67%;">
+<div style="font-size: 0.8em; line-height: 1.4;">
+<ul>
+<li class="fragment"><strong>Transferencias condicionadas</strong> (Oportunidades/México, Bono de Desarrollo Humano/Ecuador, AUH/Argentina): bien focalizadas, bajan la pobreza de forma medible.</li>
+<li class="fragment"><strong>Salario mínimo</strong> como piso igualador del ingreso.</li>
+<li class="fragment"><strong>Reforma tributaria progresiva</strong>: la carga subió de 14% a 21% del PIB (1990-2013), pero sigue regresiva y lejos de la OCDE (34%).</li>
+<li class="fragment"><strong>Más inversión y equidad en educación</strong> y formación de competencias.</li>
+<li class="fragment"><strong>Enfoque CEPAL</strong>: política social universal + focalizada, con enfoque de derechos.</li>
+</ul>
+</div>
+</div><div class="column" style="width:33%;">
+<p><img data-src="images/CEPAL.jpeg" style="width:100.0%"></p>
+<div class="source">
+<p>CEPAL, Sesión Solemne 75° Aniversario, Ciudad de México, 17 de junio de 2026.</p>
+</div>
+</div></div>
+</section>
+<section id="colombia-políticas-y-retos" class="slide level2">
+<h2>Colombia: Políticas y retos</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 0.7em; line-height: 1.45;">
+<ul>
+<li class="fragment"><strong>Más Familias en Acción (MFA)</strong>: el principal programa de transferencias condicionadas (PTC) del país, enfocado en salud y educación para familias vulnerables.</li>
+<li class="fragment"><strong>Red Unidos</strong>: no es propiamente un PTC, sino una estrategia de acompañamiento y coordinación interinstitucional para que las familias superen la pobreza extrema.</li>
+<li class="fragment"><strong>Colombia Mayor</strong>: programa que otorga subsidios económicos a adultos mayores desamparados, sin pensión o en indigencia.</li>
+<li class="fragment"><strong>Jóvenes en Acción</strong>: enfocado en la formación y el fortalecimiento de habilidades para la población joven.</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="font-size: 0.7em; line-height: 1.45;">
+<ul>
+<li class="fragment"><strong>Ingreso para la Prosperidad Social</strong>: programa que incluye componentes de inclusión productiva y generación de ingresos.</li>
+<li class="fragment"><strong>Programa de Subsidio al Aporte en Pensión (PSAP)</strong>: destinado a trabajadores independientes, desempleados y madres comunitarias para que puedan acceder a la seguridad social.</li>
+<li class="fragment"><strong>Emprende Cultura</strong>: iniciativa del Ministerio de Cultura para el emprendimiento en poblaciones vulnerables.</li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="conclusiones-y-reflexiones-finales" class="slide level2">
+<h2>Conclusiones y reflexiones finales</h2>
+<div style="font-size: 0.8em; line-height: 1.6;">
+<ul>
+<li class="fragment">Colombia sigue siendo de los países más desiguales del mundo; los datos de 2024 muestran una mejora marginal (Gini 0,553→0,551), insuficiente para revertir tres décadas de estancamiento estructural.</li>
+<li class="fragment">La desigualdad territorial puede tener menos peso del que creemos: la brecha <em>dentro</em> de cada departamento es igual (o más) de grande como la brecha <em>entre</em> departamentos.</li>
+<li class="fragment">Las causas son estructurales — educación, historia, e instituciones —, no coyunturales; por eso las soluciones tampoco lo son.</li>
+<li class="fragment">Las políticas más efectivas (transferencias focalizadas, salario mínimo, formalización) atienden síntomas; romper la transmisión intergeneracional exige igualar oportunidades y capacidades <em>educativas/laborales</em> desde la base.</li>
+<li class="fragment">Reducir la desigualdad no es solo una meta de equidad: es condición para un crecimiento sostenible y una democracia estable en la región.</li>
+</ul>
+</div>
+</section>
+<section id="referencias" class="slide level2">
+<h2>Referencias 📖</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 0.75em; line-height: 1.45;">
+<p>Alvaredo, F., Bourguignon, F., Ferreira, F., &amp; Lustig, N. (2023). <em>Seventy-five years of measuring income inequality in Latin America</em> (IDB Working Paper Series No.&nbsp;1521). Banco Interamericano de Desarrollo.</p>
+<p>Bonilla Mejía, L. (Ed.). (2011). <em>Dimensión regional de las desigualdades en Colombia</em>. Banco de la República.</p>
+<p>CEPAL. (2016). <em>La matriz de la desigualdad social en América Latina</em> (LC/G.2690(MDS.1/2)). Naciones Unidas.</p>
+<p>CEPAL. (2025). <em>Panorama Social de América Latina y el Caribe 2025: cómo salir de la trampa de alta desigualdad, baja movilidad social y débil cohesión social</em>. Naciones Unidas.</p>
+<p>Gasparini, L., Cicowiez, M., &amp; Sosa Escudero, W. (2013). <em>Pobreza y desigualdad en América Latina: Conceptos, herramientas y aplicaciones</em>. Temas Grupo Editorial.</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="font-size: 0.75em; line-height: 1.45;">
+<p>Mejía Jiménez, J. (2012). Modelos de implementación de las políticas públicas en Colombia y su impacto en el bienestar social. <em>Analecta Política</em>, 2(3), 141-164.</p>
+<p>OCDE. (2025). <em>Movilidad social y desigualdad en América Latina y el Caribe: Perspectivas desde la educación y las competencias</em>. OECD Publishing. https://doi.org/10.1787/3557f989-es</p>
+<p>Stezano, F. (2020). <em>Enfoques, definiciones y estimaciones de pobreza y desigualdad en América Latina y el Caribe: Un análisis crítico de la literatura</em> (LC/TS.2020/143). CEPAL.</p>
+</div>
+</div></div>
+</section>
+<section id="fuentes-de-datos" class="slide level2">
+<h2>Fuentes de datos 📊</h2>
+<div style="font-size: 0.68em; line-height: 1.4;">
+<p>CEPALSTAT — Comisión Económica para América Latina y el Caribe (CEPAL). Índice de Gini de concentración del ingreso. <a href="https://statistics.cepal.org/portal/cepalstat/" class="uri">https://statistics.cepal.org/portal/cepalstat/</a></p>
+<p>DANE — Departamento Administrativo Nacional de Estadística. Boletín Técnico Pobreza Monetaria en Colombia, 2024. <a href="https://www.dane.gov.co" class="uri">https://www.dane.gov.co</a></p>
+<p>SEDLAC — Socio-Economic Database for Latin America and the Caribbean (CEDLAS y Banco Mundial). <a href="https://www.cedlas.econo.unlp.edu.ar/wp/en/estadisticas/sedlac/" class="uri">https://www.cedlas.econo.unlp.edu.ar/wp/en/estadisticas/sedlac/</a></p>
+<p>Our World in Data. Economic inequality: Gini index (a partir del World Bank Poverty and Inequality Platform). <a href="https://ourworldindata.org/grapher/economic-inequality-gini-index" class="uri">https://ourworldindata.org/grapher/economic-inequality-gini-index</a></p>
+<p>World Inequality Database — WID.world. Participación en el ingreso nacional. <a href="https://wid.world/" class="uri">https://wid.world/</a></p>
+</div>
+</section></section>
+<section id="gracias" class="title-slide slide level1 section-slide center">
+<h1>Gracias</h1>
+<p>Contacto: <a href="mailto:ocsa@uninorte.edu.co">ocsa@uninorte.edu.co</a></p>
+<p>Website: <a href="pagina">https://www.uninorte.edu.co/web/ocsa</a></p>
+<p><em>Bloque D - Segundo piso</em></p>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Universidad del Norte</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="ClacsoPress_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="ClacsoPress_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="ClacsoPress_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="ClacsoPress_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="ClacsoPress_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="ClacsoPress_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="ClacsoPress_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="ClacsoPress_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="ClacsoPress_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="ClacsoPress_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copiado");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copiado");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
